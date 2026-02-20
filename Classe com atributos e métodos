@@ -1,0 +1,39 @@
+package pacoteEx2;
+public class Produto {
+    String nome;
+    double preco;
+    int estoque;
+   
+    public void exibirDados(){
+        System.out.println("Nome do Produto: " + nome);
+        System.out.println("Preço: " + preco);
+        System.out.println("Quantidade em estoque: " + estoque);
+    }
+    
+    public void calcularValorEmEstoque(){
+        System.out.println("Valor total do estoque: " + estoque * preco + "\n");
+    }
+    
+    public void aumentarQuantidadeEstoque(){
+        estoque = estoque + 10;
+        System.out.println("10 unidades acrescentadas ao estoque com sucesso!\n");
+    }
+}
+
+package pacoteEx2;
+public class Principal {
+    public static void main(String[] args) {
+        Produto produto =  new Produto();
+        produto.nome = "Shampoo";
+        produto.preco = 30.00;
+        produto.estoque = 10;
+        
+        produto.exibirDados();
+        produto.calcularValorEmEstoque();
+        produto.aumentarQuantidadeEstoque();
+        produto.exibirDados();
+        produto.calcularValorEmEstoque();
+        
+    }
+    
+}
