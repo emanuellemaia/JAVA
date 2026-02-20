@@ -20,6 +20,7 @@ public class Produto {
     }
 }
 
+
 package pacoteEx2;
 public class Principal {
     public static void main(String[] args) {
@@ -28,11 +29,28 @@ public class Principal {
         produto.preco = 30.00;
         produto.estoque = 10;
         
+        Produto produto2 = new Produto();
+        produto2.nome = "Condicionador";
+        produto2.preco = 24.90;
+        produto2.estoque = 10;
+        
         produto.exibirDados();
         produto.calcularValorEmEstoque();
         produto.aumentarQuantidadeEstoque();
         produto.exibirDados();
         produto.calcularValorEmEstoque();
+        
+        produto2.exibirDados();
+        produto2.calcularValorEmEstoque();
+        produto2.aumentarQuantidadeEstoque();
+        produto2.exibirDados();
+        produto2.calcularValorEmEstoque();
+        
+         if(produto.preco > produto2.preco){
+            System.out.println("Produto mais caro: " + produto.nome);
+        } else{
+            System.out.println("Produto mais caro: " + produto2.nome);
+        }
         
     }
     
